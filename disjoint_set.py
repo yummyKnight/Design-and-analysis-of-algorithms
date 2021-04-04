@@ -21,7 +21,7 @@ class UnionFind:
             if x.value == a:
                 current = x
                 break
-        while current.parent != None:
+        while current.parent:
             current = current.parent
         return current
 
