@@ -9,14 +9,13 @@ class Node:
 
 
 class UnionFind:
-    def __init__(self, arr):
+    def __init__(self, arr: List[int]):
         self.arr: List['Node'] = []
-        for i in range(len(arr)):
-            self.arr.append(Node(arr[i]))
+        for elem in arr:
+            self.arr.append(Node(elem))
 
     # @staticmethod
-    def find(self, a):
-        current = a
+    def find(self, a: int):
         for x in self.arr:
             if x.value == a:
                 current = x
@@ -25,13 +24,12 @@ class UnionFind:
             current = current.parent
         return current
 
-    def unite(self, a, b):
+    def unite(self, a: int, b: int):
         self.find(a).parent = self.find(b)
 
-    def test(self, a, b):
+    def test(self, a: int, b: int):
         val_a = None
         val_b = None
-
         for x in self.arr:
             if x.value == a:
                 val_a = x
