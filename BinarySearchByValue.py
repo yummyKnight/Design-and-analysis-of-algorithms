@@ -57,10 +57,5 @@ def parse_input(path_to_input: str) -> ty.Tuple[np.ndarray, int]:
 
 
 if __name__ == '__main__':
-    # start_sum()
     source_arr, amount = parse_input("BSVTESTS/5.in")
-    # plt.plot([source_arr[i + 1] - source_arr[i] for i in range(len(source_arr) - 1)])
-    # plt.show()
     print(BinarySearchByVal(source_arr, amount).perform())
-    # for val in to_find:
-    #     print(binary_search(source, val))

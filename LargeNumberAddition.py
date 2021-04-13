@@ -36,7 +36,6 @@ class BigNumber:
 
 
 def start_sum() -> list:
-
     with open("input.txt", "r") as r:
         input_ = r.readlines()
     answers = []
